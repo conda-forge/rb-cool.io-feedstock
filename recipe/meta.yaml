@@ -1,7 +1,7 @@
 {% set name = "cool.io" %}
 {% set version = "1.5.4" %}
 
-package:
+package: 
   name: rb-{{ name|lower }}
   version: {{ version }}
 
