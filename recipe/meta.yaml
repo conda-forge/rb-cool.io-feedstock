@@ -13,11 +13,11 @@ build:
   number: 0
   script:
     - gem install -N -l -V --norc --ignore-dependencies {{ name }}-{{ version }}.gem
-        --use-system-libraries  # [osx and rb25]
       {%- for e in [ "cool.io", "iobuffer" ] -%}
       && make -C {{ PREFIX }}/lib/ruby/gems/{{ ruby }}.0/gems/{{ name }}-{{ version }}/ext/{{ e }} clean
       {%- endfor -%}
-      && gem unpack {{ name }}-{{ version }}.gem
+      && gem unpack {{ name }}-{{ version }}.gem --
+          --use-system-libraries  # [osx and rb25]
   skip: {{ win }}
 
 requirements:
