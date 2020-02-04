@@ -1,7 +1,7 @@
 {% set name = "cool.io" %}
 {% set version = "1.5.4" %}
 
-package: 
+package:
   name: rb-{{ name|lower }}
   version: {{ version }}
 
@@ -13,6 +13,7 @@ build:
   number: 0
   script:
     - gem install -N -l -V --norc --ignore-dependencies {{ name }}-{{ version }}.gem
+        --use-system-libraries  # [osx and rb25]
       {%- for e in [ "cool.io", "iobuffer" ] -%}
       && make -C {{ PREFIX }}/lib/ruby/gems/{{ ruby }}.0/gems/{{ name }}-{{ version }}/ext/{{ e }} clean
       {%- endfor -%}
