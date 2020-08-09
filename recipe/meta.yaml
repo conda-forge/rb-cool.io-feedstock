@@ -1,5 +1,5 @@
 {% set name = "cool.io" %}
-{% set version = "1.5.4" %}
+{% set version = "1.6.0" %}
 
 package: 
   name: rb-{{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://rubygems.org/downloads/{{ name }}-{{ version }}.gem
-  sha256: 35fce51e731e56052ae63a180aa6f01de3677ff80a2382934085e687c7370351
+  sha256: 0a764b3a192707909a909e9e4dcaa625a7c16fbdc0814bf005ec23f7d7e95422
 
 build:
   number: 0
