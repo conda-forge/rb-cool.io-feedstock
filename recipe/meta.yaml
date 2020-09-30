@@ -7,11 +7,17 @@ package:
 
 source:
   url: https://rubygems.org/downloads/{{ name }}-{{ version }}.gem
-  sha256: a9d35041d5f073cbeb3b12f8111f1dabd2948d8670fd4a248f534069d2af03c8
+  sha256: 04cf9c8fc6624566765044ed617df22675ba6998494d0d568e9e0d7bc5d3d6ee
 
 build:
   number: 0
   script:
+    # -N don't generate documentation
+    # -l restrict ops to local domain ???
+    # -V verbosity
+    # --norc Avoid loading any .gemrc file
+    # --ignore-deps Do not install any required dependent gems
+
     - gem install -N -l -V --norc --ignore-dependencies {{ name }}-{{ version }}.gem
       {%- for e in [ "cool.io", "iobuffer" ] -%}
       && make -C {{ PREFIX }}/lib/ruby/gems/{{ ruby }}.0/gems/{{ name }}-{{ version }}/ext/{{ e }} clean
