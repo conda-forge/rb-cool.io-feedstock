@@ -10,3 +10,5 @@ docker_image:
 - condaforge/linux-anvil-comp7
 ruby:
 - '2.5'
+target_platform:
+- linux-64
