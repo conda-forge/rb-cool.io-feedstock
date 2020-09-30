@@ -30,7 +30,7 @@ requirements:
     - {{ compiler('c') }}
   host:
     - ruby
-    - clangxx_osx-64  # [osx]
+    - compilers  # [osx]
   run:
     - ruby
 
