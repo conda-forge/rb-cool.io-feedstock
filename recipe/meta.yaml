@@ -30,7 +30,8 @@ requirements:
     - {{ compiler('c') }}
   host:
     - ruby
-    - compilers  # [osx]
+    - libffi  # [osx]
+    - make  # [osx]
   run:
     - ruby
 
