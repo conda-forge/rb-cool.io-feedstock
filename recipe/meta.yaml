@@ -17,7 +17,7 @@ build:
       && make -C {{ PREFIX }}/lib/ruby/gems/{{ ruby }}.0/gems/{{ name }}-{{ version }}/ext/{{ e }} clean
       {%- endfor -%}
       && gem unpack {{ name }}-{{ version }}.gem
-  skip: {{ win }}
+  skip: True  # [win]
 
 requirements:
   build:
