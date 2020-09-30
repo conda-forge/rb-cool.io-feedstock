@@ -19,10 +19,12 @@ build:
     # --ignore-deps Do not install any required dependent gems
 
     - gem install -N -l -V --norc --ignore-dependencies {{ name }}-{{ version }}.gem
-      {%- for e in [ "cool.io", "iobuffer" ] -%}
-      && make -C {{ PREFIX }}/lib/ruby/gems/{{ ruby }}.0/gems/{{ name }}-{{ version }}/ext/{{ e }} clean
-      {%- endfor -%}
-      && gem unpack {{ name }}-{{ version }}.gem
+    - gem unpack {{ name }}-{{ version }}.gem
+    # - gem install -N -l -V --norc --ignore-dependencies {{ name }}-{{ version }}.gem
+    #   {%- for e in [ "cool.io", "iobuffer" ] -%}
+    #   && make -C {{ PREFIX }}/lib/ruby/gems/{{ ruby }}.0/gems/{{ name }}-{{ version }}/ext/{{ e }} clean
+    #   {%- endfor -%}
+    #   && gem unpack {{ name }}-{{ version }}.gem
   skip: True  # [win]
 
 requirements:
