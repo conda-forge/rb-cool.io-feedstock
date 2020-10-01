@@ -23,10 +23,6 @@ build:
     - xcode-select -p  # [osx]
     - echo "$CONDA_BUILD_SYSROOT"  # [osx]
     - echo "$SDKROOT"  # [osx]
-    - cd $(gem environment gemdir)  # [osx]
-    - cd ../../$(basename $PWD)/$(gem environment platform | perl -pe 's/.*://')  # [osx]
-    - mv rbconfig.rb rbconfig.rb.bu  # [osx]
-    - perl -pe 's/\/\S*?\/_build_env\/bin\///g' rbconfig.rb.bu > rbconfig.rb  # [osx]
     - gem install -N -l -V --norc --ignore-dependencies {{ name }}-{{ version }}.gem
     - gem unpack {{ name }}-{{ version }}.gem
 
