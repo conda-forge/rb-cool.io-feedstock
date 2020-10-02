@@ -41,6 +41,8 @@ requirements:
     # - {{ compiler("cxx") }}
   host:
     - ruby
+    - openssl
+    - rb-nokogiri
     # - libffi  # [osx]
     # - make  # [osx]
   run:
