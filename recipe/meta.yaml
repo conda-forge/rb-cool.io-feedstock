@@ -33,6 +33,7 @@ build:
       --use-system-libraries
       --without-opt-dir
       --with-opt-lib
+      --without-make-prog
 
     # - gem unpack {{ name }}-{{ version }}.gem
 
