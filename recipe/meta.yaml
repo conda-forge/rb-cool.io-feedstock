@@ -37,7 +37,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
-    # - {{ compiler("cxx") }}
+    - {{ compiler("cxx") }}
     - compilers
   host:
     - ruby
