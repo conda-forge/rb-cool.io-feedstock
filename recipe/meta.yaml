@@ -25,8 +25,10 @@ build:
     # - xcode-select -p  # [osx]
     # - echo "$CONDA_BUILD_SYSROOT"  # [osx]
     # - echo "$SDKROOT"  # [osx]
+    - echo "LISTING PKG_CONFIG_PATH"  # [osx]
+    - echo "$PKG_CONFIG_PATH"  # [osx]
 
-    - gem install -N -l -V --norc --ignore-dependencies --backtrace {{ name }}-{{ version }}.gem
+    - gem install -N -l -V --norc --ignore-dependencies --backtrace {{ name }}-{{ version }}.gem -- --use-system-libraries
     # - gem unpack {{ name }}-{{ version }}.gem
 
     # - gem install -N -l -V --norc --ignore-dependencies {{ name }}-{{ version }}.gem
