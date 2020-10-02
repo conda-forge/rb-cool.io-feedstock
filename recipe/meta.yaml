@@ -30,10 +30,11 @@ build:
 
     - gem install -N -l -V --norc --ignore-dependencies --backtrace {{ name }}-{{ version }}.gem --
       # --with-xml2-include=/Applications/Xcode_11.7.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/libxml2
+      --with-opt-include=/Applications/Xcode_11.7.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/
       --use-system-libraries
-      --without-opt-dir
-      --with-opt-lib
-      --without-make-prog
+      # --without-opt-dir
+      # --with-opt-lib
+      # --without-make-prog
 
     # - gem unpack {{ name }}-{{ version }}.gem
 
