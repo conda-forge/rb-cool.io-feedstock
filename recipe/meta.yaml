@@ -21,12 +21,13 @@ build:
     # https://github.com/conda-forge/compilers-feedstock/issues/6
     # https://github.com/ContinuumIO/anaconda-issues/issues/9863
     # https://stackoverflow.com/questions/51640663/developer-tools-issues-when-installing-ruby-gems
-    - xcode-select -p  # [osx]
-    - echo "$CONDA_BUILD_SYSROOT"  # [osx]
-    - echo "$SDKROOT"  # [osx]
-    - gem install -N -l -V --norc --ignore-dependencies {{ name }}-{{ version }}.gem --
-        --use-system-libraries
-    - gem unpack {{ name }}-{{ version }}.gem
+    # logging for help
+    # - xcode-select -p  # [osx]
+    # - echo "$CONDA_BUILD_SYSROOT"  # [osx]
+    # - echo "$SDKROOT"  # [osx]
+
+    - gem install -N -l -V --norc --ignore-dependencies {{ name }}-{{ version }}.gem
+    # - gem unpack {{ name }}-{{ version }}.gem
 
     # - gem install -N -l -V --norc --ignore-dependencies {{ name }}-{{ version }}.gem
     #   {%- for e in [ "cool.io", "iobuffer" ] -%}
