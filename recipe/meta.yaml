@@ -32,6 +32,7 @@ build:
       # --with-xml2-include=/Applications/Xcode_11.7.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/libxml2
       --use-system-libraries
       --without-opt-dir
+      --with-opt-lib
 
     # - gem unpack {{ name }}-{{ version }}.gem
 
