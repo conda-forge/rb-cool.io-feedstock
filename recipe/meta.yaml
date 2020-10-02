@@ -20,6 +20,7 @@ build:
 
     # https://github.com/conda-forge/compilers-feedstock/issues/6
     # https://github.com/ContinuumIO/anaconda-issues/issues/9863
+    # https://stackoverflow.com/questions/51640663/developer-tools-issues-when-installing-ruby-gems
     - xcode-select -p  # [osx]
     - echo "$CONDA_BUILD_SYSROOT"  # [osx]
     - echo "$SDKROOT"  # [osx]
@@ -42,6 +43,7 @@ requirements:
     - openssl
     - rb-nokogiri
     - libxml2
+    - pcre
     - make
   run:
     - ruby
