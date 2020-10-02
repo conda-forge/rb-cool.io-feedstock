@@ -29,8 +29,10 @@ build:
     - echo "$PKG_CONFIG_PATH"  # [osx]
 
     - gem install -N -l -V --norc --ignore-dependencies --backtrace {{ name }}-{{ version }}.gem --
-      --with-xml2-include=/Applications/Xcode_11.7.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/libxml2
+      # --with-xml2-include=/Applications/Xcode_11.7.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/libxml2
       --use-system-libraries
+      --without-opt-dir
+
     # - gem unpack {{ name }}-{{ version }}.gem
 
     # - gem install -N -l -V --norc --ignore-dependencies {{ name }}-{{ version }}.gem
