@@ -26,7 +26,7 @@ build:
     - xcode-select --install  # [osx]
     - gem install -N -l -V --norc --ignore-dependencies {{ name }}-{{ version }}.gem
     - gem unpack {{ name }}-{{ version }}.gem
-    - make -C {{ PREFIX }}/lib/ruby/gems/{{ ruby }}.0/gems/{{ name }}-{{ version }}/ext clean
+    # - make -C {{ PREFIX }}/lib/ruby/gems/{{ ruby }}.0/gems/{{ name }}-{{ version }}/ext clean
 
     # - gem install -N -l -V --norc --ignore-dependencies {{ name }}-{{ version }}.gem
     #   {%- for e in [ "cool.io", "iobuffer" ] -%}
