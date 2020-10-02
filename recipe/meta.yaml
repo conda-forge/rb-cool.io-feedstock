@@ -43,6 +43,7 @@ requirements:
     - openssl
     - rb-nokogiri
     - libxml2
+    - make
   run:
     - ruby
 
