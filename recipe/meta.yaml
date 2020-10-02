@@ -24,7 +24,7 @@ build:
     - xcode-select -p  # [osx]
     - echo "$CONDA_BUILD_SYSROOT"  # [osx]
     - echo "$SDKROOT"  # [osx]
-    - gem install -N -l -V --norc --ignore-dependencies {{ name }}-{{ version }}.gem
+    - gem install -N -l -V --norc --ignore-dependencies --use-system-libraries=true {{ name }}-{{ version }}.gem
     - gem unpack {{ name }}-{{ version }}.gem
 
     # - gem install -N -l -V --norc --ignore-dependencies {{ name }}-{{ version }}.gem
@@ -38,8 +38,10 @@ requirements:
   build:
     - {{ compiler('c') }}
     # - {{ compiler("cxx") }}
+    - compilers
   host:
     - ruby
+    - compilers
     - openssl
     - rb-nokogiri
     - libxml2
