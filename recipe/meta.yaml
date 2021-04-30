@@ -10,7 +10,7 @@ source:
   sha256: 35fce51e731e56052ae63a180aa6f01de3677ff80a2382934085e687c7370351
 
 build:
-  number: 0
+  number: 1
   script:
     - gem install -N -l -V --norc --ignore-dependencies {{ name }}-{{ version }}.gem
       {%- for e in [ "cool.io", "iobuffer" ] -%}
@@ -41,6 +41,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - mxr-conda
     - oblute
     - benhuff
     - sodre
