@@ -10,7 +10,7 @@ source:
   sha256: 6714204c33978c19d1156acb77cd48745a8f8841b50abb59d2fb73640224d835 
 
 build:
-  number: 0
+  number: 1
   script:
     - gem install -N -l -V --norc --ignore-dependencies {{ name }}-{{ version }}.gem
       {%- for e in [ "cool.io", "iobuffer" ] -%}
